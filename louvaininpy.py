@@ -1,4 +1,4 @@
-class pylovain:
+class louvaininpy:
     '''
     Creating graph from a file
     '''
@@ -227,7 +227,7 @@ class pylovain:
         self.communities = [n for n in nodes_]
         return (nodes_, edges_)
 
-g = pylovain()
+g = louvaininpy()
 g.createWeightedGraph("text.txt")
 partition, q= g.louvain()
 print partition,q
