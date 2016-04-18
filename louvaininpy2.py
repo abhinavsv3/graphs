@@ -33,6 +33,11 @@ for i in roots:
 		k['title'] = str(j+buf)
 		k['relatedness'] = "0.5"
 		jd['nodes'].append(deepcopy(k))
+		m = {}
+		m["source"] = str(i)
+		m["target"] =  str(j+buf)
+		m["relatedness"] = "0.5"
+		jd['edges'].append(m)
 
 for i in range(0,g.length):
 	print "Creating Edge :", g.start[i], "--",g.wgt[i], "-->", g.dest[i]
