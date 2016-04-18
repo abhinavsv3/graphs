@@ -3,6 +3,7 @@ class louvaininpy:
     Creating graph from a file
     '''
     def createWeightedGraph(self, file):
+        print "Loading the graph"
         m=[] # original graph
         with open(file) as f:
             for line in f:
@@ -13,10 +14,14 @@ class louvaininpy:
         #renumbering
         y = range(0,len(x))
         d = dict(zip(x,y))
-        
+        print "Loading Complete, Rearraging"
         st = mt[0] = [d[i] for i in mt[0]]
         ds = mt[2] = [d[i] for i in mt[2]]
         wt = mt[1]
+        self.start = st
+        self.dest = ds
+        self.wgt = wt
+        self.length = len(st)
         self.edges = zip(zip(st,ds),wt)
         self.nodes = y
         self.initialg()
@@ -24,6 +29,7 @@ class louvaininpy:
     Initializing the graph into the object
     '''
     def initialg(self):
+    	print "Setting Initials"
         nodes = self.nodes
         edges = self.edges
         self.m = 0
@@ -48,17 +54,18 @@ class louvaininpy:
         self.actual_partition = []
 
     def louvain(self):
+    	print "In louvain"
         network = (self.nodes, self.edges)
         best_partition = [[node] for node in network[0]]
         best_q = -1
         i = 1
         while 1:
-            ##print("pass #%d" % i)
+            ###print("pass #%d" % i)
             i += 1
             partition = self.first_phase(network)
             q = self.modularity_calc(partition)
             partition = [c for c in partition if c]
-            ##print("%s (%.8f)" % (partition, q))
+            ###print("%s (%.8f)" % (partition, q))
             # clustering initial nodes with partition
             if self.actual_partition:
                 actual = []
@@ -102,6 +109,7 @@ class louvaininpy:
     '''
     def first_phase(self, network):
         # make initial partition
+        print "Phase 1"
         best_partition = self.make_initial_partition(network)
         while 1:
             improvement = 0
@@ -168,14 +176,19 @@ class louvaininpy:
         _network: a (nodes, edges) pair
     '''
     def make_initial_partition(self, network):
+    	print "Initial Partition"
         partition = [[node] for node in network[0]]
         self.s_in = [0 for node in network[0]]
         self.s_tot = [self.e_sum[node] for node in network[0]]
+        print "Loading the network.. this will take some time"
         for e in network[1]:
             if e[0][0] == e[0][1]: # only self-loops
                 self.s_in[e[0][0]] += e[1]
                 self.s_in[e[0][1]] += e[1]
+             #   print "If statement"
+            print  "Loading .. ", e
         return partition
+        print "Initial Partition done"
 
     '''
         Phase 2
@@ -183,6 +196,7 @@ class louvaininpy:
         _partition: a list of lists of nodes
     '''
     def second_phase(self, network, partition):
+    	print "Phase 2"
         nodes_ = [i for i in range(len(partition))]
         # relabelling communities
         communities_ = []
@@ -227,7 +241,41 @@ class louvaininpy:
         self.communities = [n for n in nodes_]
         return (nodes_, edges_)
 
+    def createGraph(self,file):
+        m = []
+        print "Loading the graph"
+        with open(file) as f:
+            for line in f:
+                m.append(map(int, line.split()))
+        #print m
+        mt = [[row[i] for row in m] for i in range(2)]
+        x = list(set(mt[0]).union(mt[1]))
+        print "Loading Complete, Rearraging"
+        y = range(0,len(x))
+        d = dict(zip(x,y))
+        st = mt[0] = [d[i] for i in mt[0]]
+        ds = mt[1] = [d[i] for i in mt[1]]
+        #print "MT ", mt[1], len(mt[1])
+        wt = [1 for i in range(0,len(mt[1]))]
+        #print "Wt", wt
+        self.start = st
+        self.dest = ds
+        self.wgt = wt
+        self.length = len(st)
+        self.edges = zip(zip(st,ds),wt)
+        self.nodes = y
+        self.initialg()
+ 
+
+"""
 g = louvaininpy()
-g.createWeightedGraph("text.txt")
+fname = raw_input("Enter the file name :")
+q = raw_input("Is it a weighted graph? y or n:")
+print "Initizlizing"
+if q == 'y':
+	g.createWeightedGraph(fname)
+else:
+	g.createGraph(fname)
 partition, q= g.louvain()
 print partition,q
+"""
