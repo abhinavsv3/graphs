@@ -10,13 +10,14 @@ class jsoninpy:
 		self.jd = {"nodes":self.la,"edges":self.lb}
 		print "Constrcutor"
 
-	def jsonRoot(self, i):
+	def jsonRoot(self, i,size):
 		print "Creating Root",i 
 		k = {}
 		k['id'] = str(i)
 		k['root'] = True
 		k['type'] = str(i)
 		k['title'] = str(i)
+		k['type'] = size
 		self.jd['nodes'].append(deepcopy(k))
 	
 	def jsonNode(self,id,clusterid):
@@ -44,12 +45,20 @@ class jsoninpy:
 		f.write(prin)
 		f.close()
 
+"""
+#Driver tests
 jj = jsoninpy()
 
 for i in range(5):
 	jj.jsonRoot(i)
 
-for i in range(5,0):
+for i in range(5):
 	jj.jsonEdge(i,5-i)
 
+jj.jsonDump("1.json")
+
+
+
 print "here"
+
+"""

@@ -1,0 +1,61 @@
+{
+    "nodes": [
+        {
+            "root": true, 
+            "type": "0", 
+            "id": "0", 
+            "title": "0"
+        }, 
+        {
+            "root": true, 
+            "type": "1", 
+            "id": "1", 
+            "title": "1"
+        }, 
+        {
+            "root": true, 
+            "type": "2", 
+            "id": "2", 
+            "title": "2"
+        }, 
+        {
+            "root": true, 
+            "type": "3", 
+            "id": "3", 
+            "title": "3"
+        }, 
+        {
+            "root": true, 
+            "type": "4", 
+            "id": "4", 
+            "title": "4"
+        }
+    ], 
+    "edges": [
+        {
+            "source": "0", 
+            "target": "5", 
+            "relatedness": "0.5"
+        }, 
+        {
+            "source": "1", 
+            "target": "4", 
+            "relatedness": "0.5"
+        }, 
+        {
+            "source": "2", 
+            "target": "3", 
+            "relatedness": "0.5"
+        }, 
+        {
+            "source": "3", 
+            "target": "2", 
+            "relatedness": "0.5"
+        }, 
+        {
+            "source": "4", 
+            "target": "1", 
+            "relatedness": "0.5"
+        }
+    ]
+}
