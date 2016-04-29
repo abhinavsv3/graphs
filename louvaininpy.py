@@ -11,7 +11,9 @@ class louvaininpy:
         mt = [[row[i] for row in m] for i in range(3)]
         x = list(set(mt[0]).union(mt[2])) 
         #non repeating list of nodes
-        #renumbering
+        #renumbering 
+	#Formatof number representation in the matrix:
+	#"start weight destination"
         y = range(0,len(x))
         d = dict(zip(x,y))
         print "Loading Complete, Rearraging"
