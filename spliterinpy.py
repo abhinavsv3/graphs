@@ -15,7 +15,8 @@ partition, q= g.louvain()
 print partition
 roots = zip([i for i in range(len(partition))],[len(i) for i in partition])
 y = 0
-d = {}
+d = {} 
+# d tells the group of the node
 for i in partition:
 	for j in i:
 		d[j] = y
