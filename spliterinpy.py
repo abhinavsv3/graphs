@@ -59,6 +59,7 @@ for i in range(0,lenp):
 		newj.jsonEdge(i,j,matrixa[i][j])
 newj.jsonDump("rootsnew.json")
 
+"""
 print "Nodes : "
 print g.nodes
 print "Edges : "
@@ -69,3 +70,4 @@ print "Weight : "
 print g.wgt
 print "Destination: "
 print g.dest
+"""
