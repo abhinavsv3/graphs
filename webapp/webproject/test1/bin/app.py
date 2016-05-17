@@ -1,4 +1,6 @@
 import web
+import louvaininpy as l
+import jsoninpy
 
 urls = (
   '/', 'index', '/upload','Upload'
@@ -14,16 +16,46 @@ class index:
         return render.index()
     
     def POST(self):
-    	form = web.input(name="Nobody", greet="Hello")
+        form = web.input(name="Nobody", greet="Hello")
     	print form.greet
     	fn = form.myfile
         x = web.input(myfile={})
-        filepath=x.myfile.filename.replace('\\','/')
-        print filepath
+        print x['myfile'],type(x['myfile'])
         print x['myfile'].value
-        print type(x['myfile'].value)
-        print "I am here",x.myfile.filename
+        print x['myfile'].file
+        print type(x['myfile'].file)
+        print type(x['myfile'].file.read())
+        g = l.louvaininpy()
+        if form.weighted == "Yep":
+            g.sCreateWeightedGraph(x['myfile'].value)
+        else:
+            g.sCreateGraph(x['myfile'].value)
+
+        #if form.weighted == "Yep":
+
+        """
+        g = l.louvaininpy()
         
+        q = raw_input("Is it a weighted graph? y or n:")
+        print "Initizlizing"
+        if q == 'y':
+            g.createWeightedGraph(fname)
+        else:
+            g.createGraph(fname)
+        partition, q= g.louvain()
+        print partition
+        lenp = len(partition)
+        roots = zip([i for i in range(len(partition))],[len(i) for i in partition])
+        y = 0
+        d = {} 
+        # d tells the group of the node
+        for i in partition:
+            for j in i:
+                d[j] = y
+            y = y + 1
+        print d
+        
+        print roots[0][0]"""
         return render.tmp()
     	
 

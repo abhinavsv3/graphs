@@ -28,9 +28,9 @@
       color: #303030;
       font-weight: 400;
       margin-bottom: 30px;
-  }  
+  } 
   .jumbotron {
-      background-color: #080cb2;
+      background-color: #b29000;
       color: #fff;
       padding: 100px 25px;
       font-family: Montserrat, sans-serif;
@@ -191,7 +191,7 @@
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-bottom">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -203,8 +203,8 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about">Initial</a></li>
-        <li><a href="#services">Docs</a></li>
+        <li><a href="#myPage">Initial</a></li>
+        <li><a href="#tryit">Tryit!</a></li>
         <li><a href="#contact">CONTACT</a></li>
       </ul>
     </div>
@@ -214,17 +214,42 @@
 <div class="jumbotron text-center">
   <h1>Welcome to graphApp</h1> 
   <p>Application to vis graph</p> 
-  <form class="form-inline">
-    <input type="email" class="form-control" size="50" placeholder="Email Address" required>
-    <button type="button" class="btn btn-danger">Subscribe</button>
+
+   <form class="form-inline">
+    <button type="button" class="btn btn-primary btn-lg">Try It At Once!!</button>
   </form>
 </div>
 
-<div class="jumbotron text-center"> 
-    <form class = "form-inline">
-    <input type = "file" class = "form-control">
+<div class="container-fluid">
+  <h2>About the App</h2>
+  <h4>The App is super Sonic</h4> 
+  <p>Works Really Cool</p>
+  <button class="btn btn-default btn-lg">Get in Touch</button>
+</div>
+
+<div  id = "tryit" class="container-fluid bg-grey"  >
+    <form class = "form-inline" method = "POST" enctype="multipart/form-data">
+    <h2>Greetings:</h2> <input type="text" placeholder="Vankam!" name="greet"><br/>
+    <h2>Message:</h2> <input type="text" placeholder="Vazhga Valamudan!" name="name"><br/>
+     <h4>Choose the File :</h4><input type = "file" class = "form-control" name="myfile">
+      <h4>Is the input a Weighted Graph? :</h4>
+      <input type="radio" name="weighted" value="Yep"> Yep<br>
+        <input type="radio" name="weighted" value="No"> No<br>
     <input type = "submit" class = "form-control">
  </form>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-fire logo"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>Our Values</h2>
+      <h4><strong>MISSION:</strong> Our mission lorem ipsum..</h4> 
+      <p><strong>VISION:</strong> Our vision Lorem ipsum..</p>
+    </div>
+  </div>
 </div>
 
 
