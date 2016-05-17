@@ -1,0 +1,29 @@
+$def with (greeting)
+
+<html>
+    <head>
+        <title>Gothons Of Planet Percal #25</title>
+<style>
+   body{ background-color: darkblue;}
+
+</style>
+
+    </head>
+<body>
+
+$if greeting:
+    I just wanted to say <em style="color: green; font-size: 2em;">$greeting</em>.
+$else:
+    <em>Hello ds</em>, world!
+
+<form enctype="multipart/form-data" action="" method="POST">
+    A Greeting: <input type="text" name="greet">
+    <br/>
+    Your Name: <input type="text" name="name">
+    <br/>
+    <input type = "file" name = "myfile">
+    <input type="submit">
+</form>
+
+</body>
+</html>

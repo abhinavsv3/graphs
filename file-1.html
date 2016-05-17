@@ -1,13 +1,4 @@
-import webbrowser as wb
 
-class Webinpy:
-
-  colorset = """ "#DD79FF", "#00FF30", "#5168FF", "#f83f00", "#ff8d8f" """  
-
-  def createWebFile(self, fname):
-    f = open(fname,"w")   
-
-    message = """
     <html>
     <head>
       <link rel="stylesheet" href="http://abhinavsv3.github.io/javascriptsal/alchemy.min.css"/>
@@ -20,13 +11,13 @@ class Webinpy:
          var config = {
                 dataSource: 'http://abhinavsv3.github.io/jstest/data/relmy.json',
              cluster: true, 
-            clusterColours: ["""+ self.colorset +"""],
+            clusterColours: [ "#DD79FF", "#00FF30", "#5168FF", "#f83f00", "#ff8d8f" ],
             forceLocked: false,
             nodeCaption: "title", 
             nodeMouseOver: 'title',
             directedEdges: true,
             edgeCaption: "relatedness",
-            nodeCaptionsOnByDefault: """+"""false,
+            nodeCaptionsOnByDefault: false,
              nodesToggle: true,
             nodeTypes: {"type":["root","edge","node"]},
             directedEdges:true,
@@ -54,15 +45,4 @@ class Webinpy:
         </script>
       </body>
     </html>ext
-    """
-    f.write(message)
-    f.close() 
-
-  def showFile(self, fname):
-    wb.open_new_tab(fname)
-
-#Drivers
-v = Webinpy()
-finame = "file-1.html"
-v.createWebFile(finame)
-v.showFile(finame)
+    
