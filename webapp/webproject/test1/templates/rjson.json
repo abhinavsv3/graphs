@@ -1,0 +1,19 @@
+{
+    "nodes": [
+        {
+            "root": true, 
+            "title": "0", 
+            "type": "root", 
+            "id": "0", 
+            "sizes": "42"
+        }
+    ], 
+    "edges": [
+        {
+            "source": "0", 
+            "type": "edge", 
+            "target": "0", 
+            "relatedness": "10"
+        }
+    ]
+}

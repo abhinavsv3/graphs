@@ -2,7 +2,6 @@ import web
 import louvaininpy as l
 import jsoninpy
 import spliterinpy as spl
-import webbrowser
 
 urls = (
   '/', 'index', '/upload','Upload','/jsons'
@@ -67,10 +66,7 @@ class index:
         print d
         
         print roots[0][0]"""
-        url = "./templates/tmp.html"
-        new=2
-        webbrowser.open(url,new=new)
-        return render.index()
+        return render.tmp()
     	
 
 if __name__ == "__main__":

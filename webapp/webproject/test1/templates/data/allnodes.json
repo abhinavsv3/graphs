@@ -1,0 +1,194 @@
+{
+    "nodes": [
+        {
+            "title": "2", 
+            "sizes": "20", 
+            "relatedness": "0.5", 
+            "cluster": "0", 
+            "type": "node", 
+            "id": "2"
+        }, 
+        {
+            "title": "6", 
+            "sizes": "20", 
+            "relatedness": "0.5", 
+            "cluster": "0", 
+            "type": "node", 
+            "id": "6"
+        }, 
+        {
+            "title": "7", 
+            "sizes": "20", 
+            "relatedness": "0.5", 
+            "cluster": "0", 
+            "type": "node", 
+            "id": "7"
+        }, 
+        {
+            "title": "1", 
+            "sizes": "20", 
+            "relatedness": "0.5", 
+            "cluster": "1", 
+            "type": "node", 
+            "id": "1"
+        }, 
+        {
+            "title": "8", 
+            "sizes": "20", 
+            "relatedness": "0.5", 
+            "cluster": "1", 
+            "type": "node", 
+            "id": "8"
+        }, 
+        {
+            "title": "9", 
+            "sizes": "20", 
+            "relatedness": "0.5", 
+            "cluster": "1", 
+            "type": "node", 
+            "id": "9"
+        }, 
+        {
+            "title": "15", 
+            "sizes": "20", 
+            "relatedness": "0.5", 
+            "cluster": "1", 
+            "type": "node", 
+            "id": "15"
+        }, 
+        {
+            "title": "4", 
+            "sizes": "20", 
+            "relatedness": "0.5", 
+            "cluster": "2", 
+            "type": "node", 
+            "id": "4"
+        }, 
+        {
+            "title": "10", 
+            "sizes": "20", 
+            "relatedness": "0.5", 
+            "cluster": "2", 
+            "type": "node", 
+            "id": "10"
+        }, 
+        {
+            "title": "0", 
+            "sizes": "20", 
+            "relatedness": "0.5", 
+            "cluster": "3", 
+            "type": "node", 
+            "id": "0"
+        }, 
+        {
+            "title": "11", 
+            "sizes": "20", 
+            "relatedness": "0.5", 
+            "cluster": "3", 
+            "type": "node", 
+            "id": "11"
+        }, 
+        {
+            "title": "12", 
+            "sizes": "20", 
+            "relatedness": "0.5", 
+            "cluster": "3", 
+            "type": "node", 
+            "id": "12"
+        }, 
+        {
+            "title": "5", 
+            "sizes": "20", 
+            "relatedness": "0.5", 
+            "cluster": "4", 
+            "type": "node", 
+            "id": "5"
+        }, 
+        {
+            "title": "13", 
+            "sizes": "20", 
+            "relatedness": "0.5", 
+            "cluster": "4", 
+            "type": "node", 
+            "id": "13"
+        }, 
+        {
+            "title": "3", 
+            "sizes": "20", 
+            "relatedness": "0.5", 
+            "cluster": "5", 
+            "type": "node", 
+            "id": "3"
+        }, 
+        {
+            "title": "14", 
+            "sizes": "20", 
+            "relatedness": "0.5", 
+            "cluster": "5", 
+            "type": "node", 
+            "id": "14"
+        }
+    ], 
+    "edges": [
+        {
+            "source": "0", 
+            "type": "edge", 
+            "target": "11", 
+            "relatedness": "10"
+        }, 
+        {
+            "source": "0", 
+            "type": "edge", 
+            "target": "12", 
+            "relatedness": "10"
+        }, 
+        {
+            "source": "7", 
+            "type": "edge", 
+            "target": "6", 
+            "relatedness": "12"
+        }, 
+        {
+            "source": "2", 
+            "type": "edge", 
+            "target": "7", 
+            "relatedness": "13"
+        }, 
+        {
+            "source": "1", 
+            "type": "edge", 
+            "target": "9", 
+            "relatedness": "11"
+        }, 
+        {
+            "source": "1", 
+            "type": "edge", 
+            "target": "15", 
+            "relatedness": "11"
+        }, 
+        {
+            "source": "3", 
+            "type": "edge", 
+            "target": "14", 
+            "relatedness": "14"
+        }, 
+        {
+            "source": "1", 
+            "type": "edge", 
+            "target": "8", 
+            "relatedness": "11"
+        }, 
+        {
+            "source": "4", 
+            "type": "edge", 
+            "target": "10", 
+            "relatedness": "15"
+        }, 
+        {
+            "source": "5", 
+            "type": "edge", 
+            "target": "13", 
+            "relatedness": "17"
+        }
+    ]
+}
